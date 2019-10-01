@@ -5,28 +5,31 @@
 }
 
 .app {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
-.app > header {
+header h1 {
     margin: 40px 0px 30px 0px;
+    text-align: center;
 }
 
-.app > p {
+header > p {
     font-size: 1.2em;
 }
 
 .pads {
+    background: darkkhaki;
     width: 100%;
     display: flex;
 }
 
-.pads > div {
-    height: 120px;
-    width: 120px;
+.pads > div{
+    height: 100px;
+    width: 100px;
     flex: 1;
 }
 
@@ -47,4 +50,28 @@
 }
 .pad6 {
     background: #7c0e9e;
+}
+
+@keyframes jump{
+    0%{
+        bottom: 0%;
+        left: 10%;
+    }
+    50%{
+        bottom: 80%;
+        left: 50%;
+    }
+    100%{
+        bottom: 0%;
+        left: 90%;
+    }
+}
+
+.visuals > div {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    bottom: 0%;
+    z-index: -1;
 }
